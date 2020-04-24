@@ -92,12 +92,20 @@ namespace FastFast
                 else
                 {
                     int sel = comboBox_Select.SelectedIndex;        //combobox에서 선택된 index를 변수에 입력
-                    Product product = new Product()                 //새로운 메뉴 등록
+                    
+                    Product product = new Product();                //새로운 메뉴 등록
+                    if(DataManager.Products.Count == 0)
                     {
-                        Name = textBox_MenuName.Text,
-                        Price = int.Parse(textBox_MenuPrice.Text),
-                        Category = comboBox_Select.SelectedIndex.ToString()
-                    };
+                        product.Num = 1;
+                    }
+                    else
+                    {
+                        product.Num = DataManager.Products[DataManager.Products.Count - 1].Num + 1;
+                    }
+                    product.Name = textBox_MenuName.Text;
+                    product.Price = int.Parse(textBox_MenuPrice.Text);
+                    product.Category = comboBox_Select.SelectedIndex.ToString();
+                    
                     DataManager.Products.Add(product);              //Products 리스트에 추가
 
                     if (sel == 0)                                    //index 변수 0(면류)에 추가
@@ -207,11 +215,97 @@ namespace FastFast
         {
             try
             {
-                
+                Product product = DataManager.Products.Single((x) => x.Num == dataGridView_Noodle.CurrentRow.Index);
+                product.Name = textBox_MenuName.Text;
+                product.Price = int.Parse(textBox_MenuPrice.Text);
             }
             catch (Exception)
             {
                 MessageBox.Show("메뉴가 없습니다.");
+            }
+        }
+
+        private void button_Delete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //Product product = (Product)dataGridView_Noodle.SelectedRows;
+                //DataManager.Products.Remove(product);
+                Product product = DataManager.Products.Single((x) => x.Num == int.Parse(textBox_Num.Text));
+                DataManager.Products.Remove(product);
+                
+                dataGridView_Noodle.DataSource = null;
+                dataGridView_Rice.DataSource = null;
+                dataGridView_Cooking.DataSource = null;
+                dataGridView_SetMenu.DataSource = null;
+                dataGridView_service.DataSource = null;
+                dataGridView_Drink.DataSource = null;
+                
+                List<Product> temp = new List<Product>();
+                foreach (var item in DataManager.Products)
+                {
+                    if (item.Category == "0")
+                    {
+                        temp.Add(item);
+                    }
+                }
+                dataGridView_Noodle.DataSource = temp;
+
+                List<Product> temp1 = new List<Product>();
+                foreach (var item in DataManager.Products)
+                {
+                    if (item.Category == "1")
+                    {
+                        temp1.Add(item);
+                    }
+                }
+                dataGridView_Rice.DataSource = temp1;
+
+                List<Product> temp2 = new List<Product>();
+                foreach (var item in DataManager.Products)
+                {
+                    if (item.Category == "2")
+                    {
+                        temp2.Add(item);
+                    }
+                }
+                dataGridView_Cooking.DataSource = temp2;
+
+                List<Product> temp3 = new List<Product>();
+                foreach (var item in DataManager.Products)
+                {
+                    if (item.Category == "3")
+                    {
+                        temp3.Add(item);
+                    }
+                }
+                dataGridView_SetMenu.DataSource = temp3;
+
+                List<Product> temp4 = new List<Product>();
+                foreach (var item in DataManager.Products)
+                {
+                    if (item.Category == "4")
+                    {
+                        temp4.Add(item);
+                    }
+                }
+                dataGridView_service.DataSource = temp4;
+
+                List<Product> temp5 = new List<Product>();
+                foreach (var item in DataManager.Products)
+                {
+                    if (item.Category == "5")
+                    {
+                        temp5.Add(item);
+                    }
+                }
+                dataGridView_Drink.DataSource = temp5;
+
+                DataManager.Save();
+            }
+            catch
+            {
+
             }
         }
 
@@ -220,6 +314,7 @@ namespace FastFast
             try
             {
                 Product product = dataGridView_Noodle.CurrentRow.DataBoundItem as Product;
+                textBox_Num.Text = product.Num.ToString();
                 textBox_MenuName.Text = product.Name;
                 textBox_MenuPrice.Text = product.Price.ToString();
                 comboBox_Select.SelectedIndex = 0;
@@ -235,6 +330,7 @@ namespace FastFast
             try
             {
                 Product product = dataGridView_Rice.CurrentRow.DataBoundItem as Product;
+                textBox_Num.Text = product.Num.ToString();
                 textBox_MenuName.Text = product.Name;
                 textBox_MenuPrice.Text = product.Price.ToString();
                 comboBox_Select.SelectedIndex = 1;
@@ -250,6 +346,7 @@ namespace FastFast
             try
             {
                 Product product = dataGridView_Cooking.CurrentRow.DataBoundItem as Product;
+                textBox_Num.Text = product.Num.ToString();
                 textBox_MenuName.Text = product.Name;
                 textBox_MenuPrice.Text = product.Price.ToString();
                 comboBox_Select.SelectedIndex = 2;
@@ -265,6 +362,7 @@ namespace FastFast
             try
             {
                 Product product = dataGridView_SetMenu.CurrentRow.DataBoundItem as Product;
+                textBox_Num.Text = product.Num.ToString();
                 textBox_MenuName.Text = product.Name;
                 textBox_MenuPrice.Text = product.Price.ToString();
                 comboBox_Select.SelectedIndex = 3;
@@ -280,6 +378,7 @@ namespace FastFast
             try
             {
                 Product product = dataGridView_service.CurrentRow.DataBoundItem as Product;
+                textBox_Num.Text = product.Num.ToString();
                 textBox_MenuName.Text = product.Name;
                 textBox_MenuPrice.Text = product.Price.ToString();
                 comboBox_Select.SelectedIndex = 4;
@@ -295,6 +394,7 @@ namespace FastFast
             try
             {
                 Product product = dataGridView_Drink.CurrentRow.DataBoundItem as Product;
+                textBox_Num.Text = product.Num.ToString();
                 textBox_MenuName.Text = product.Name;
                 textBox_MenuPrice.Text = product.Price.ToString();
                 comboBox_Select.SelectedIndex = 5;
@@ -304,5 +404,6 @@ namespace FastFast
 
             }
         }
+
     }
 }

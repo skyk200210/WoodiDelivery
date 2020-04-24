@@ -53,6 +53,10 @@
             this.dataGridView_service = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView_Drink = new System.Windows.Forms.DataGridView();
+            this.Num = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox_Num = new System.Windows.Forms.TextBox();
             this.nameDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -86,6 +90,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBox_Num);
             this.groupBox1.Controls.Add(this.button_Delete);
             this.groupBox1.Controls.Add(this.button_Modify);
             this.groupBox1.Controls.Add(this.button_Add);
@@ -111,6 +116,7 @@
             this.button_Delete.TabIndex = 8;
             this.button_Delete.Text = "삭제";
             this.button_Delete.UseVisualStyleBackColor = true;
+            this.button_Delete.Click += new System.EventHandler(this.button_Delete_Click);
             // 
             // button_Modify
             // 
@@ -209,14 +215,18 @@
             // 
             // dataGridView_Noodle
             // 
+            this.dataGridView_Noodle.AllowUserToAddRows = false;
+            this.dataGridView_Noodle.AllowUserToDeleteRows = false;
             this.dataGridView_Noodle.AutoGenerateColumns = false;
             this.dataGridView_Noodle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Noodle.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Num,
             this.nameDataGridViewTextBoxColumn,
             this.priceDataGridViewTextBoxColumn});
             this.dataGridView_Noodle.DataSource = this.productBindingSource;
             this.dataGridView_Noodle.Location = new System.Drawing.Point(6, 21);
             this.dataGridView_Noodle.Name = "dataGridView_Noodle";
+            this.dataGridView_Noodle.ReadOnly = true;
             this.dataGridView_Noodle.RowTemplate.Height = 23;
             this.dataGridView_Noodle.Size = new System.Drawing.Size(304, 369);
             this.dataGridView_Noodle.TabIndex = 0;
@@ -234,14 +244,18 @@
             // 
             // dataGridView_Rice
             // 
+            this.dataGridView_Rice.AllowUserToAddRows = false;
+            this.dataGridView_Rice.AllowUserToDeleteRows = false;
             this.dataGridView_Rice.AutoGenerateColumns = false;
             this.dataGridView_Rice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Rice.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
             this.nameDataGridViewTextBoxColumn1,
             this.priceDataGridViewTextBoxColumn1});
             this.dataGridView_Rice.DataSource = this.productBindingSource;
             this.dataGridView_Rice.Location = new System.Drawing.Point(6, 20);
             this.dataGridView_Rice.Name = "dataGridView_Rice";
+            this.dataGridView_Rice.ReadOnly = true;
             this.dataGridView_Rice.RowTemplate.Height = 23;
             this.dataGridView_Rice.Size = new System.Drawing.Size(304, 369);
             this.dataGridView_Rice.TabIndex = 1;
@@ -259,14 +273,18 @@
             // 
             // dataGridView_Cooking
             // 
+            this.dataGridView_Cooking.AllowUserToAddRows = false;
+            this.dataGridView_Cooking.AllowUserToDeleteRows = false;
             this.dataGridView_Cooking.AutoGenerateColumns = false;
             this.dataGridView_Cooking.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Cooking.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn2,
             this.nameDataGridViewTextBoxColumn2,
             this.priceDataGridViewTextBoxColumn2});
             this.dataGridView_Cooking.DataSource = this.productBindingSource;
             this.dataGridView_Cooking.Location = new System.Drawing.Point(6, 20);
             this.dataGridView_Cooking.Name = "dataGridView_Cooking";
+            this.dataGridView_Cooking.ReadOnly = true;
             this.dataGridView_Cooking.RowTemplate.Height = 23;
             this.dataGridView_Cooking.Size = new System.Drawing.Size(304, 369);
             this.dataGridView_Cooking.TabIndex = 2;
@@ -284,6 +302,8 @@
             // 
             // dataGridView_SetMenu
             // 
+            this.dataGridView_SetMenu.AllowUserToAddRows = false;
+            this.dataGridView_SetMenu.AllowUserToDeleteRows = false;
             this.dataGridView_SetMenu.AutoGenerateColumns = false;
             this.dataGridView_SetMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_SetMenu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -292,6 +312,7 @@
             this.dataGridView_SetMenu.DataSource = this.productBindingSource;
             this.dataGridView_SetMenu.Location = new System.Drawing.Point(6, 20);
             this.dataGridView_SetMenu.Name = "dataGridView_SetMenu";
+            this.dataGridView_SetMenu.ReadOnly = true;
             this.dataGridView_SetMenu.RowTemplate.Height = 23;
             this.dataGridView_SetMenu.Size = new System.Drawing.Size(304, 369);
             this.dataGridView_SetMenu.TabIndex = 3;
@@ -330,6 +351,8 @@
             // 
             // dataGridView_service
             // 
+            this.dataGridView_service.AllowUserToAddRows = false;
+            this.dataGridView_service.AllowUserToDeleteRows = false;
             this.dataGridView_service.AutoGenerateColumns = false;
             this.dataGridView_service.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_service.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -338,6 +361,7 @@
             this.dataGridView_service.DataSource = this.productBindingSource;
             this.dataGridView_service.Location = new System.Drawing.Point(0, 0);
             this.dataGridView_service.Name = "dataGridView_service";
+            this.dataGridView_service.ReadOnly = true;
             this.dataGridView_service.RowTemplate.Height = 23;
             this.dataGridView_service.Size = new System.Drawing.Size(301, 343);
             this.dataGridView_service.TabIndex = 4;
@@ -356,6 +380,8 @@
             // 
             // dataGridView_Drink
             // 
+            this.dataGridView_Drink.AllowUserToAddRows = false;
+            this.dataGridView_Drink.AllowUserToDeleteRows = false;
             this.dataGridView_Drink.AutoGenerateColumns = false;
             this.dataGridView_Drink.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Drink.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -364,24 +390,56 @@
             this.dataGridView_Drink.DataSource = this.productBindingSource;
             this.dataGridView_Drink.Location = new System.Drawing.Point(0, 0);
             this.dataGridView_Drink.Name = "dataGridView_Drink";
+            this.dataGridView_Drink.ReadOnly = true;
             this.dataGridView_Drink.RowTemplate.Height = 23;
             this.dataGridView_Drink.Size = new System.Drawing.Size(301, 343);
             this.dataGridView_Drink.TabIndex = 5;
             this.dataGridView_Drink.CurrentCellChanged += new System.EventHandler(this.dataGridView_Drink_CurrentCellChanged);
             // 
+            // Num
+            // 
+            this.Num.DataPropertyName = "Num";
+            this.Num.HeaderText = "Num";
+            this.Num.Name = "Num";
+            this.Num.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Num";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Num";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Num";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Num";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // textBox_Num
+            // 
+            this.textBox_Num.Location = new System.Drawing.Point(257, 8);
+            this.textBox_Num.Name = "textBox_Num";
+            this.textBox_Num.Size = new System.Drawing.Size(38, 26);
+            this.textBox_Num.TabIndex = 9;
+            // 
             // nameDataGridViewTextBoxColumn4
             // 
             this.nameDataGridViewTextBoxColumn4.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn4.HeaderText = "메뉴";
+            this.nameDataGridViewTextBoxColumn4.HeaderText = "Name";
             this.nameDataGridViewTextBoxColumn4.Name = "nameDataGridViewTextBoxColumn4";
-            this.nameDataGridViewTextBoxColumn4.Width = 135;
+            this.nameDataGridViewTextBoxColumn4.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn4.Width = 150;
             // 
             // priceDataGridViewTextBoxColumn4
             // 
             this.priceDataGridViewTextBoxColumn4.DataPropertyName = "Price";
-            this.priceDataGridViewTextBoxColumn4.HeaderText = "가격";
+            this.priceDataGridViewTextBoxColumn4.HeaderText = "Price";
             this.priceDataGridViewTextBoxColumn4.Name = "priceDataGridViewTextBoxColumn4";
-            this.priceDataGridViewTextBoxColumn4.Width = 125;
+            this.priceDataGridViewTextBoxColumn4.ReadOnly = true;
+            this.priceDataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.priceDataGridViewTextBoxColumn4.Width = 110;
             // 
             // productBindingSource
             // 
@@ -390,72 +448,86 @@
             // nameDataGridViewTextBoxColumn5
             // 
             this.nameDataGridViewTextBoxColumn5.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn5.HeaderText = "메뉴";
+            this.nameDataGridViewTextBoxColumn5.HeaderText = "Name";
             this.nameDataGridViewTextBoxColumn5.Name = "nameDataGridViewTextBoxColumn5";
-            this.nameDataGridViewTextBoxColumn5.Width = 135;
+            this.nameDataGridViewTextBoxColumn5.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.nameDataGridViewTextBoxColumn5.Width = 150;
             // 
             // priceDataGridViewTextBoxColumn5
             // 
             this.priceDataGridViewTextBoxColumn5.DataPropertyName = "Price";
-            this.priceDataGridViewTextBoxColumn5.HeaderText = "가격";
+            this.priceDataGridViewTextBoxColumn5.HeaderText = "Price";
             this.priceDataGridViewTextBoxColumn5.Name = "priceDataGridViewTextBoxColumn5";
-            this.priceDataGridViewTextBoxColumn5.Width = 125;
+            this.priceDataGridViewTextBoxColumn5.ReadOnly = true;
+            this.priceDataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.priceDataGridViewTextBoxColumn5.Width = 110;
             // 
             // nameDataGridViewTextBoxColumn3
             // 
             this.nameDataGridViewTextBoxColumn3.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn3.HeaderText = "메뉴";
+            this.nameDataGridViewTextBoxColumn3.HeaderText = "Name";
             this.nameDataGridViewTextBoxColumn3.Name = "nameDataGridViewTextBoxColumn3";
-            this.nameDataGridViewTextBoxColumn3.Width = 135;
+            this.nameDataGridViewTextBoxColumn3.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn3.Width = 150;
             // 
             // priceDataGridViewTextBoxColumn3
             // 
             this.priceDataGridViewTextBoxColumn3.DataPropertyName = "Price";
-            this.priceDataGridViewTextBoxColumn3.HeaderText = "가격";
+            this.priceDataGridViewTextBoxColumn3.HeaderText = "Price";
             this.priceDataGridViewTextBoxColumn3.Name = "priceDataGridViewTextBoxColumn3";
-            this.priceDataGridViewTextBoxColumn3.Width = 125;
+            this.priceDataGridViewTextBoxColumn3.ReadOnly = true;
+            this.priceDataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.priceDataGridViewTextBoxColumn3.Width = 110;
             // 
             // nameDataGridViewTextBoxColumn2
             // 
             this.nameDataGridViewTextBoxColumn2.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn2.HeaderText = "메뉴";
+            this.nameDataGridViewTextBoxColumn2.HeaderText = "Name";
             this.nameDataGridViewTextBoxColumn2.Name = "nameDataGridViewTextBoxColumn2";
-            this.nameDataGridViewTextBoxColumn2.Width = 135;
+            this.nameDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.nameDataGridViewTextBoxColumn2.Width = 150;
             // 
             // priceDataGridViewTextBoxColumn2
             // 
             this.priceDataGridViewTextBoxColumn2.DataPropertyName = "Price";
-            this.priceDataGridViewTextBoxColumn2.HeaderText = "가격";
+            this.priceDataGridViewTextBoxColumn2.HeaderText = "Price";
             this.priceDataGridViewTextBoxColumn2.Name = "priceDataGridViewTextBoxColumn2";
-            this.priceDataGridViewTextBoxColumn2.Width = 125;
+            this.priceDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.priceDataGridViewTextBoxColumn2.Width = 110;
             // 
             // nameDataGridViewTextBoxColumn1
             // 
             this.nameDataGridViewTextBoxColumn1.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn1.HeaderText = "메뉴";
+            this.nameDataGridViewTextBoxColumn1.HeaderText = "Name";
             this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
-            this.nameDataGridViewTextBoxColumn1.Width = 135;
+            this.nameDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn1.Width = 150;
             // 
             // priceDataGridViewTextBoxColumn1
             // 
             this.priceDataGridViewTextBoxColumn1.DataPropertyName = "Price";
-            this.priceDataGridViewTextBoxColumn1.HeaderText = "가격";
+            this.priceDataGridViewTextBoxColumn1.HeaderText = "Price";
             this.priceDataGridViewTextBoxColumn1.Name = "priceDataGridViewTextBoxColumn1";
-            this.priceDataGridViewTextBoxColumn1.Width = 125;
+            this.priceDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.priceDataGridViewTextBoxColumn1.Width = 110;
             // 
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "메뉴";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.Width = 135;
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.Width = 150;
             // 
             // priceDataGridViewTextBoxColumn
             // 
             this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "가격";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
             this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            this.priceDataGridViewTextBoxColumn.Width = 125;
+            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
+            this.priceDataGridViewTextBoxColumn.Width = 110;
             // 
             // Form2
             // 
@@ -519,17 +591,21 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DataGridView dataGridView_Drink;
         private System.Windows.Forms.BindingSource productBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Num;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.TextBox textBox_Num;
     }
 }

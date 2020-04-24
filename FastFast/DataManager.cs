@@ -28,6 +28,7 @@ namespace FastFast
                 Products = (from item in productXElement.Descendants("product")
                             select new Product()
                             {
+                                Num = int.Parse(item.Element("num").Value),
                                 Name = item.Element("name").Value,
                                 Price = int.Parse(item.Element("price").Value),
                                 Category = item.Element("category").Value
@@ -62,6 +63,7 @@ namespace FastFast
             foreach (var item in Products)
             {
                 productsOutput += "<product>\n";
+                productsOutput += " <num>" + item.Num + "</num>\n";
                 productsOutput += " <name>" + item.Name + "</name>\n";
                 productsOutput += " <price>" + item.Price + "</price>\n";
                 productsOutput += " <category>" + item.Category + "</category>\n";
