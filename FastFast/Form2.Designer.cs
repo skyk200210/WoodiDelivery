@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox_Num = new System.Windows.Forms.TextBox();
             this.button_Delete = new System.Windows.Forms.Button();
             this.button_Modify = new System.Windows.Forms.Button();
             this.button_Add = new System.Windows.Forms.Button();
@@ -53,10 +54,6 @@
             this.dataGridView_service = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView_Drink = new System.Windows.Forms.DataGridView();
-            this.Num = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox_Num = new System.Windows.Forms.TextBox();
             this.nameDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -107,6 +104,14 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "메뉴 추가/수정/삭제";
+            // 
+            // textBox_Num
+            // 
+            this.textBox_Num.Location = new System.Drawing.Point(257, 8);
+            this.textBox_Num.Name = "textBox_Num";
+            this.textBox_Num.Size = new System.Drawing.Size(38, 26);
+            this.textBox_Num.TabIndex = 9;
+            this.textBox_Num.Visible = false;
             // 
             // button_Delete
             // 
@@ -220,7 +225,6 @@
             this.dataGridView_Noodle.AutoGenerateColumns = false;
             this.dataGridView_Noodle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Noodle.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Num,
             this.nameDataGridViewTextBoxColumn,
             this.priceDataGridViewTextBoxColumn});
             this.dataGridView_Noodle.DataSource = this.productBindingSource;
@@ -249,7 +253,6 @@
             this.dataGridView_Rice.AutoGenerateColumns = false;
             this.dataGridView_Rice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Rice.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
             this.nameDataGridViewTextBoxColumn1,
             this.priceDataGridViewTextBoxColumn1});
             this.dataGridView_Rice.DataSource = this.productBindingSource;
@@ -278,7 +281,6 @@
             this.dataGridView_Cooking.AutoGenerateColumns = false;
             this.dataGridView_Cooking.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Cooking.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn2,
             this.nameDataGridViewTextBoxColumn2,
             this.priceDataGridViewTextBoxColumn2});
             this.dataGridView_Cooking.DataSource = this.productBindingSource;
@@ -395,34 +397,6 @@
             this.dataGridView_Drink.Size = new System.Drawing.Size(301, 343);
             this.dataGridView_Drink.TabIndex = 5;
             this.dataGridView_Drink.CurrentCellChanged += new System.EventHandler(this.dataGridView_Drink_CurrentCellChanged);
-            // 
-            // Num
-            // 
-            this.Num.DataPropertyName = "Num";
-            this.Num.HeaderText = "Num";
-            this.Num.Name = "Num";
-            this.Num.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Num";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Num";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Num";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Num";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // textBox_Num
-            // 
-            this.textBox_Num.Location = new System.Drawing.Point(257, 8);
-            this.textBox_Num.Name = "textBox_Num";
-            this.textBox_Num.Size = new System.Drawing.Size(38, 26);
-            this.textBox_Num.TabIndex = 9;
             // 
             // nameDataGridViewTextBoxColumn4
             // 
@@ -597,15 +571,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Num;
+        private System.Windows.Forms.TextBox textBox_Num;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.TextBox textBox_Num;
     }
 }

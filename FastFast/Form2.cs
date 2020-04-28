@@ -215,9 +215,11 @@ namespace FastFast
         {
             try
             {
-                Product product = DataManager.Products.Single((x) => x.Num == dataGridView_Noodle.CurrentRow.Index);
+                Product product = DataManager.Products.Single((x) => x.Num == int.Parse(textBox_Num.Text));
                 product.Name = textBox_MenuName.Text;
                 product.Price = int.Parse(textBox_MenuPrice.Text);
+                product.Category = comboBox_Select.SelectedIndex.ToString();
+                DataManager.Save();
             }
             catch (Exception)
             {
@@ -241,6 +243,7 @@ namespace FastFast
                 dataGridView_service.DataSource = null;
                 dataGridView_Drink.DataSource = null;
                 
+                //카테고리 선택 후 DataGridView별로 데이터 소스 정리
                 List<Product> temp = new List<Product>();
                 foreach (var item in DataManager.Products)
                 {
@@ -309,6 +312,7 @@ namespace FastFast
             }
         }
 
+        //데이터 그리드뷰 선택시 메뉴 이름, 가격 text창에 띄워주는 코드
         private void dataGridView_Noodle_CurrentCellChanged(object sender, EventArgs e)
         {   
             try

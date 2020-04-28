@@ -17,6 +17,81 @@ namespace FastFast
             InitializeComponent();
 
             this.WindowState = FormWindowState.Maximized;       //윈폼 전체화면
+
+            DGV_Noodle.DataSource = DataManager.Products;
+
+            List<Product> temp = new List<Product>();
+            foreach (var item in DataManager.Products)
+            {
+                if (item.Category == "0")
+                {
+                    temp.Add(item);
+                }
+            }
+            DGV_Noodle.DataSource = temp;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            //List<Product> temp = new List<Product>();
+            //foreach (var item in DataManager.Products)
+            //{
+            //    if (item.Category == "0")
+            //    {
+            //        temp.Add(item);
+            //    }
+            //}
+            //DGV_Noodle.DataSource = temp;
+
+            //List<Product> temp1 = new List<Product>();
+            //foreach (var item in DataManager.Products)
+            //{
+            //    if (item.Category == "1")
+            //    {
+            //        temp1.Add(item);
+            //    }
+            //}
+            //dataGridView_Rice.DataSource = temp1;
+
+            //List<Product> temp2 = new List<Product>();
+            //foreach (var item in DataManager.Products)
+            //{
+            //    if (item.Category == "2")
+            //    {
+            //        temp2.Add(item);
+            //    }
+            //}
+            //dataGridView_Cooking.DataSource = temp2;
+
+            //List<Product> temp3 = new List<Product>();
+            //foreach (var item in DataManager.Products)
+            //{
+            //    if (item.Category == "3")
+            //    {
+            //        temp3.Add(item);
+            //    }
+            //}
+            //dataGridView_SetMenu.DataSource = temp3;
+
+            //List<Product> temp4 = new List<Product>();
+            //foreach (var item in DataManager.Products)
+            //{
+            //    if (item.Category == "4")
+            //    {
+            //        temp4.Add(item);
+            //    }
+            //}
+            //dataGridView_service.DataSource = temp4;
+
+            //List<Product> temp5 = new List<Product>();
+            //foreach (var item in DataManager.Products)
+            //{
+            //    if (item.Category == "5")
+            //    {
+            //        temp5.Add(item);
+            //    }
+            //}
+            //dataGridView_Drink.DataSource = temp5;
         }
 
 
@@ -68,6 +143,9 @@ namespace FastFast
         private void 메뉴관리ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new Form2().ShowDialog();
+            DataManager.Load();
+            DGV_Noodle.DataSource = null;
+            DGV_Noodle.DataSource = DataManager.Products;
         }
 
     }
