@@ -29,15 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.detailAddreas = new System.Windows.Forms.GroupBox();
             this.button_TotalDelete = new System.Windows.Forms.Button();
             this.button_Bell = new System.Windows.Forms.Button();
@@ -82,13 +83,23 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.DGV_Service = new System.Windows.Forms.DataGridView();
+            this.dataGridViewButtonColumn4 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.DGV_Drink = new System.Windows.Forms.DataGridView();
+            this.dataGridViewButtonColumn5 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.DGV_Noodle = new System.Windows.Forms.DataGridView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.DGV_Rice = new System.Windows.Forms.DataGridView();
+            this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.DGV_Cooking = new System.Windows.Forms.DataGridView();
+            this.dataGridViewButtonColumn2 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.DGV_SetMenu = new System.Windows.Forms.DataGridView();
+            this.dataGridViewButtonColumn3 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.메뉴관리ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.고객관리ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -144,41 +155,36 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button_Reset = new System.Windows.Forms.Button();
-            this.DGV_Rice = new System.Windows.Forms.DataGridView();
-            this.DGV_Cooking = new System.Windows.Forms.DataGridView();
-            this.DGV_SetMenu = new System.Windows.Forms.DataGridView();
-            this.DGV_Service = new System.Windows.Forms.DataGridView();
-            this.DGV_Drink = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dataGridViewButtonColumn2 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dataGridViewButtonColumn3 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dataGridViewButtonColumn4 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dataGridViewButtonColumn5 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.detailAddreas.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Service)).BeginInit();
             this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Drink)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Noodle)).BeginInit();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Rice)).BeginInit();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Cooking)).BeginInit();
             this.tabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_SetMenu)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -186,11 +192,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.order_History)).BeginInit();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.order_Info)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_Rice)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_Cooking)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_SetMenu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_Service)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_Drink)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -666,6 +667,43 @@
             this.tabPage4.Text = "서비스";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // DGV_Service
+            // 
+            this.DGV_Service.AutoGenerateColumns = false;
+            this.DGV_Service.BackgroundColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("D2Coding", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_Service.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.DGV_Service.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_Service.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewButtonColumn4});
+            this.DGV_Service.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DGV_Service.DataSource = this.productBindingSource;
+            this.DGV_Service.Location = new System.Drawing.Point(0, 3);
+            this.DGV_Service.Name = "DGV_Service";
+            this.DGV_Service.ReadOnly = true;
+            this.DGV_Service.RowTemplate.Height = 23;
+            this.DGV_Service.Size = new System.Drawing.Size(411, 511);
+            this.DGV_Service.TabIndex = 3;
+            // 
+            // dataGridViewButtonColumn4
+            // 
+            this.dataGridViewButtonColumn4.HeaderText = "추가";
+            this.dataGridViewButtonColumn4.Name = "dataGridViewButtonColumn4";
+            this.dataGridViewButtonColumn4.ReadOnly = true;
+            this.dataGridViewButtonColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewButtonColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewButtonColumn4.Text = "+";
+            this.dataGridViewButtonColumn4.UseColumnTextForButtonValue = true;
+            this.dataGridViewButtonColumn4.Width = 85;
+            // 
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.DGV_Drink);
@@ -676,6 +714,43 @@
             this.tabPage5.TabIndex = 2;
             this.tabPage5.Text = "주류";
             this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // DGV_Drink
+            // 
+            this.DGV_Drink.AutoGenerateColumns = false;
+            this.DGV_Drink.BackgroundColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("D2Coding", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_Drink.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.DGV_Drink.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_Drink.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewButtonColumn5});
+            this.DGV_Drink.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DGV_Drink.DataSource = this.productBindingSource;
+            this.DGV_Drink.Location = new System.Drawing.Point(0, 3);
+            this.DGV_Drink.Name = "DGV_Drink";
+            this.DGV_Drink.ReadOnly = true;
+            this.DGV_Drink.RowTemplate.Height = 23;
+            this.DGV_Drink.Size = new System.Drawing.Size(411, 511);
+            this.DGV_Drink.TabIndex = 4;
+            // 
+            // dataGridViewButtonColumn5
+            // 
+            this.dataGridViewButtonColumn5.HeaderText = "추가";
+            this.dataGridViewButtonColumn5.Name = "dataGridViewButtonColumn5";
+            this.dataGridViewButtonColumn5.ReadOnly = true;
+            this.dataGridViewButtonColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewButtonColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewButtonColumn5.Text = "+";
+            this.dataGridViewButtonColumn5.UseColumnTextForButtonValue = true;
+            this.dataGridViewButtonColumn5.Width = 85;
             // 
             // tabControl1
             // 
@@ -738,6 +813,43 @@
             this.tabPage1.Text = "밥류";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // DGV_Rice
+            // 
+            this.DGV_Rice.AutoGenerateColumns = false;
+            this.DGV_Rice.BackgroundColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("D2Coding", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_Rice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.DGV_Rice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_Rice.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewButtonColumn1});
+            this.DGV_Rice.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DGV_Rice.DataSource = this.productBindingSource;
+            this.DGV_Rice.Location = new System.Drawing.Point(4, 4);
+            this.DGV_Rice.Name = "DGV_Rice";
+            this.DGV_Rice.ReadOnly = true;
+            this.DGV_Rice.RowTemplate.Height = 23;
+            this.DGV_Rice.Size = new System.Drawing.Size(482, 510);
+            this.DGV_Rice.TabIndex = 1;
+            // 
+            // dataGridViewButtonColumn1
+            // 
+            this.dataGridViewButtonColumn1.HeaderText = "추가";
+            this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
+            this.dataGridViewButtonColumn1.ReadOnly = true;
+            this.dataGridViewButtonColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewButtonColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewButtonColumn1.Text = "+";
+            this.dataGridViewButtonColumn1.UseColumnTextForButtonValue = true;
+            this.dataGridViewButtonColumn1.Width = 105;
+            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.DGV_Cooking);
@@ -749,6 +861,43 @@
             this.tabPage3.Text = "요리류";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // DGV_Cooking
+            // 
+            this.DGV_Cooking.AutoGenerateColumns = false;
+            this.DGV_Cooking.BackgroundColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("D2Coding", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_Cooking.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.DGV_Cooking.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_Cooking.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewButtonColumn2});
+            this.DGV_Cooking.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DGV_Cooking.DataSource = this.productBindingSource;
+            this.DGV_Cooking.Location = new System.Drawing.Point(4, 4);
+            this.DGV_Cooking.Name = "DGV_Cooking";
+            this.DGV_Cooking.ReadOnly = true;
+            this.DGV_Cooking.RowTemplate.Height = 23;
+            this.DGV_Cooking.Size = new System.Drawing.Size(482, 510);
+            this.DGV_Cooking.TabIndex = 2;
+            // 
+            // dataGridViewButtonColumn2
+            // 
+            this.dataGridViewButtonColumn2.HeaderText = "추가";
+            this.dataGridViewButtonColumn2.Name = "dataGridViewButtonColumn2";
+            this.dataGridViewButtonColumn2.ReadOnly = true;
+            this.dataGridViewButtonColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewButtonColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewButtonColumn2.Text = "+";
+            this.dataGridViewButtonColumn2.UseColumnTextForButtonValue = true;
+            this.dataGridViewButtonColumn2.Width = 105;
+            // 
             // tabPage6
             // 
             this.tabPage6.Controls.Add(this.DGV_SetMenu);
@@ -759,6 +908,43 @@
             this.tabPage6.TabIndex = 4;
             this.tabPage6.Text = "세트메뉴";
             this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // DGV_SetMenu
+            // 
+            this.DGV_SetMenu.AutoGenerateColumns = false;
+            this.DGV_SetMenu.BackgroundColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("D2Coding", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_SetMenu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.DGV_SetMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_SetMenu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewButtonColumn3});
+            this.DGV_SetMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DGV_SetMenu.DataSource = this.productBindingSource;
+            this.DGV_SetMenu.Location = new System.Drawing.Point(4, 4);
+            this.DGV_SetMenu.Name = "DGV_SetMenu";
+            this.DGV_SetMenu.ReadOnly = true;
+            this.DGV_SetMenu.RowTemplate.Height = 23;
+            this.DGV_SetMenu.Size = new System.Drawing.Size(482, 510);
+            this.DGV_SetMenu.TabIndex = 2;
+            // 
+            // dataGridViewButtonColumn3
+            // 
+            this.dataGridViewButtonColumn3.HeaderText = "추가";
+            this.dataGridViewButtonColumn3.Name = "dataGridViewButtonColumn3";
+            this.dataGridViewButtonColumn3.ReadOnly = true;
+            this.dataGridViewButtonColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewButtonColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewButtonColumn3.Text = "+";
+            this.dataGridViewButtonColumn3.UseColumnTextForButtonValue = true;
+            this.dataGridViewButtonColumn3.Width = 105;
             // 
             // menuStrip1
             // 
@@ -987,14 +1173,14 @@
             // order_History
             // 
             this.order_History.BackgroundColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.order_History.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.order_History.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.order_History.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.order_History.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn13,
@@ -1009,14 +1195,14 @@
             this.Column10,
             this.Column11,
             this.Column12});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.order_History.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.order_History.DefaultCellStyle = dataGridViewCellStyle9;
             this.order_History.Location = new System.Drawing.Point(6, 20);
             this.order_History.Name = "order_History";
             this.order_History.RowTemplate.Height = 23;
@@ -1170,14 +1356,14 @@
             // order_Info
             // 
             this.order_Info.BackgroundColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.order_Info.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.order_Info.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.order_Info.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.order_Info.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column13,
@@ -1304,200 +1490,6 @@
             this.button_Reset.Text = "주 문 취 소";
             this.button_Reset.UseVisualStyleBackColor = true;
             // 
-            // DGV_Rice
-            // 
-            this.DGV_Rice.AutoGenerateColumns = false;
-            this.DGV_Rice.BackgroundColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("D2Coding", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_Rice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.DGV_Rice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Rice.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewButtonColumn1});
-            this.DGV_Rice.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DGV_Rice.DataSource = this.productBindingSource;
-            this.DGV_Rice.Location = new System.Drawing.Point(4, 4);
-            this.DGV_Rice.Name = "DGV_Rice";
-            this.DGV_Rice.ReadOnly = true;
-            this.DGV_Rice.RowTemplate.Height = 23;
-            this.DGV_Rice.Size = new System.Drawing.Size(482, 510);
-            this.DGV_Rice.TabIndex = 1;
-            // 
-            // DGV_Cooking
-            // 
-            this.DGV_Cooking.AutoGenerateColumns = false;
-            this.DGV_Cooking.BackgroundColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("D2Coding", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_Cooking.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.DGV_Cooking.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Cooking.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewButtonColumn2});
-            this.DGV_Cooking.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DGV_Cooking.DataSource = this.productBindingSource;
-            this.DGV_Cooking.Location = new System.Drawing.Point(4, 4);
-            this.DGV_Cooking.Name = "DGV_Cooking";
-            this.DGV_Cooking.ReadOnly = true;
-            this.DGV_Cooking.RowTemplate.Height = 23;
-            this.DGV_Cooking.Size = new System.Drawing.Size(482, 510);
-            this.DGV_Cooking.TabIndex = 2;
-            // 
-            // DGV_SetMenu
-            // 
-            this.DGV_SetMenu.AutoGenerateColumns = false;
-            this.DGV_SetMenu.BackgroundColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("D2Coding", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_SetMenu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.DGV_SetMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_SetMenu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewButtonColumn3});
-            this.DGV_SetMenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DGV_SetMenu.DataSource = this.productBindingSource;
-            this.DGV_SetMenu.Location = new System.Drawing.Point(4, 4);
-            this.DGV_SetMenu.Name = "DGV_SetMenu";
-            this.DGV_SetMenu.ReadOnly = true;
-            this.DGV_SetMenu.RowTemplate.Height = 23;
-            this.DGV_SetMenu.Size = new System.Drawing.Size(482, 510);
-            this.DGV_SetMenu.TabIndex = 2;
-            // 
-            // DGV_Service
-            // 
-            this.DGV_Service.AutoGenerateColumns = false;
-            this.DGV_Service.BackgroundColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("D2Coding", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_Service.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.DGV_Service.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Service.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewButtonColumn4});
-            this.DGV_Service.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DGV_Service.DataSource = this.productBindingSource;
-            this.DGV_Service.Location = new System.Drawing.Point(0, 3);
-            this.DGV_Service.Name = "DGV_Service";
-            this.DGV_Service.ReadOnly = true;
-            this.DGV_Service.RowTemplate.Height = 23;
-            this.DGV_Service.Size = new System.Drawing.Size(411, 511);
-            this.DGV_Service.TabIndex = 3;
-            // 
-            // DGV_Drink
-            // 
-            this.DGV_Drink.AutoGenerateColumns = false;
-            this.DGV_Drink.BackgroundColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("D2Coding", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_Drink.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.DGV_Drink.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Drink.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewButtonColumn5});
-            this.DGV_Drink.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DGV_Drink.DataSource = this.productBindingSource;
-            this.DGV_Drink.Location = new System.Drawing.Point(0, 3);
-            this.DGV_Drink.Name = "DGV_Drink";
-            this.DGV_Drink.ReadOnly = true;
-            this.DGV_Drink.RowTemplate.Height = 23;
-            this.DGV_Drink.Size = new System.Drawing.Size(411, 511);
-            this.DGV_Drink.TabIndex = 4;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "추가";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Text = "+";
-            this.Column1.UseColumnTextForButtonValue = true;
-            this.Column1.Width = 105;
-            // 
-            // dataGridViewButtonColumn1
-            // 
-            this.dataGridViewButtonColumn1.HeaderText = "추가";
-            this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
-            this.dataGridViewButtonColumn1.ReadOnly = true;
-            this.dataGridViewButtonColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewButtonColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewButtonColumn1.Text = "+";
-            this.dataGridViewButtonColumn1.UseColumnTextForButtonValue = true;
-            this.dataGridViewButtonColumn1.Width = 105;
-            // 
-            // dataGridViewButtonColumn2
-            // 
-            this.dataGridViewButtonColumn2.HeaderText = "추가";
-            this.dataGridViewButtonColumn2.Name = "dataGridViewButtonColumn2";
-            this.dataGridViewButtonColumn2.ReadOnly = true;
-            this.dataGridViewButtonColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewButtonColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewButtonColumn2.Text = "+";
-            this.dataGridViewButtonColumn2.UseColumnTextForButtonValue = true;
-            this.dataGridViewButtonColumn2.Width = 105;
-            // 
-            // dataGridViewButtonColumn3
-            // 
-            this.dataGridViewButtonColumn3.HeaderText = "추가";
-            this.dataGridViewButtonColumn3.Name = "dataGridViewButtonColumn3";
-            this.dataGridViewButtonColumn3.ReadOnly = true;
-            this.dataGridViewButtonColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewButtonColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewButtonColumn3.Text = "+";
-            this.dataGridViewButtonColumn3.UseColumnTextForButtonValue = true;
-            this.dataGridViewButtonColumn3.Width = 105;
-            // 
-            // dataGridViewButtonColumn4
-            // 
-            this.dataGridViewButtonColumn4.HeaderText = "추가";
-            this.dataGridViewButtonColumn4.Name = "dataGridViewButtonColumn4";
-            this.dataGridViewButtonColumn4.ReadOnly = true;
-            this.dataGridViewButtonColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewButtonColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewButtonColumn4.Text = "+";
-            this.dataGridViewButtonColumn4.UseColumnTextForButtonValue = true;
-            this.dataGridViewButtonColumn4.Width = 85;
-            // 
-            // dataGridViewButtonColumn5
-            // 
-            this.dataGridViewButtonColumn5.HeaderText = "추가";
-            this.dataGridViewButtonColumn5.Name = "dataGridViewButtonColumn5";
-            this.dataGridViewButtonColumn5.ReadOnly = true;
-            this.dataGridViewButtonColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewButtonColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewButtonColumn5.Text = "+";
-            this.dataGridViewButtonColumn5.UseColumnTextForButtonValue = true;
-            this.dataGridViewButtonColumn5.Width = 85;
-            // 
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.DataPropertyName = "Name";
@@ -1533,22 +1525,6 @@
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             this.dataGridViewTextBoxColumn10.ReadOnly = true;
             this.dataGridViewTextBoxColumn10.Width = 110;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
-            this.priceDataGridViewTextBoxColumn.Width = 130;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -1598,6 +1574,33 @@
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
             this.dataGridViewTextBoxColumn6.Width = 130;
             // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.priceDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
+            this.priceDataGridViewTextBoxColumn.Width = 130;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "추가";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Text = "+";
+            this.Column1.UseColumnTextForButtonValue = true;
+            this.Column1.Width = 105;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -1622,13 +1625,18 @@
             this.groupBox1.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Service)).EndInit();
             this.tabPage5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Drink)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Noodle)).EndInit();
             this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Rice)).EndInit();
             this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Cooking)).EndInit();
             this.tabPage6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_SetMenu)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -1640,11 +1648,6 @@
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.order_Info)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_Rice)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_Cooking)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_SetMenu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_Service)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_Drink)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1765,9 +1768,6 @@
         public System.Windows.Forms.DataGridView DGV_Cooking;
         public System.Windows.Forms.DataGridView DGV_SetMenu;
         public System.Windows.Forms.DataGridView DGV_Drink;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewButtonColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn1;
@@ -1783,6 +1783,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewButtonColumn Column1;
     }
 }
 

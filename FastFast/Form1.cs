@@ -17,7 +17,7 @@ namespace FastFast
             InitializeComponent();
 
             this.WindowState = FormWindowState.Maximized;       //윈폼 전체화면 
-                                                                //ProductList.Product_List();
+            //ProductList.Product_List();
             List<Product> temp = new List<Product>();
             foreach (var item in DataManager.Products)
             {
@@ -77,7 +77,6 @@ namespace FastFast
                 }
             }
             DGV_Drink.DataSource = temp5;
-            
         }
 
         private void button_radish_Click(object sender, EventArgs e)

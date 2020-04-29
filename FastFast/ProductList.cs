@@ -9,68 +9,74 @@ namespace FastFast
     class ProductList
     {
         public static void Product_List() {
-
-            Form1 form1 = new Form1();
-
-            List<Product> temp = new List<Product>();
-            foreach (var item in DataManager.Products)
+            try
             {
-                if (item.Category == "0")
-                {
-                    temp.Add(item);
-                }
-            }
-            form1.DGV_Noodle.DataSource = temp;
+                Form1 form1 = new Form1();
 
-            List<Product> temp1 = new List<Product>();
-            foreach (var item in DataManager.Products)
-            {
-                if (item.Category == "1")
+                List<Product> temp = new List<Product>();
+                foreach (var item in DataManager.Products)
                 {
-                    temp1.Add(item);
+                    if (item.Category == "0")
+                    {
+                        temp.Add(item);
+                    }
                 }
-            }
-            form1.DGV_Rice.DataSource = temp1;
+                form1.DGV_Noodle.DataSource = temp;
 
-            List<Product> temp2 = new List<Product>();
-            foreach (var item in DataManager.Products)
-            {
-                if (item.Category == "2")
+                List<Product> temp1 = new List<Product>();
+                foreach (var item in DataManager.Products)
                 {
-                    temp2.Add(item);
+                    if (item.Category == "1")
+                    {
+                        temp1.Add(item);
+                    }
                 }
-            }
-            form1.DGV_Cooking.DataSource = temp2;
+                form1.DGV_Rice.DataSource = temp1;
 
-            List<Product> temp3 = new List<Product>();
-            foreach (var item in DataManager.Products)
-            {
-                if (item.Category == "3")
+                List<Product> temp2 = new List<Product>();
+                foreach (var item in DataManager.Products)
                 {
-                    temp3.Add(item);
+                    if (item.Category == "2")
+                    {
+                        temp2.Add(item);
+                    }
                 }
-            }
-            form1.DGV_SetMenu.DataSource = temp3;
+                form1.DGV_Cooking.DataSource = temp2;
 
-            List<Product> temp4 = new List<Product>();
-            foreach (var item in DataManager.Products)
-            {
-                if (item.Category == "4")
+                List<Product> temp3 = new List<Product>();
+                foreach (var item in DataManager.Products)
                 {
-                    temp4.Add(item);
+                    if (item.Category == "3")
+                    {
+                        temp3.Add(item);
+                    }
                 }
-            }
-            form1.DGV_Service.DataSource = temp4;
+                form1.DGV_SetMenu.DataSource = temp3;
 
-            List<Product> temp5 = new List<Product>();
-            foreach (var item in DataManager.Products)
-            {
-                if (item.Category == "5")
+                List<Product> temp4 = new List<Product>();
+                foreach (var item in DataManager.Products)
                 {
-                    temp5.Add(item);
+                    if (item.Category == "4")
+                    {
+                        temp4.Add(item);
+                    }
                 }
+                form1.DGV_Service.DataSource = temp4;
+
+                List<Product> temp5 = new List<Product>();
+                foreach (var item in DataManager.Products)
+                {
+                    if (item.Category == "5")
+                    {
+                        temp5.Add(item);
+                    }
+                }
+                form1.DGV_Drink.DataSource = temp5;
             }
-            form1.DGV_Drink.DataSource = temp5;
+            catch(Exception)
+            {
+
+            }
         }
     }
 }
